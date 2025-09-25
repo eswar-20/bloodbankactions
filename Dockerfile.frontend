@@ -6,7 +6,7 @@ WORKDIR /app
 RUN apk add --no-cache git
 
 # Clone your frontend repo
-RUN git clone <remote_git_repository> .
+RUN git clone https://github.com/eswar-20/blood-bank-frontend.git .
 
 # Install deps and build
 RUN npm install
