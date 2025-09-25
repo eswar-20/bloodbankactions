@@ -1,4 +1,4 @@
-name: Deploy Ecommerce Fullstack App on EC2
+name: Deploy bloodbank Fullstack App on EC2
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
           username: ubuntu   # or ubuntu if Ubuntu server
           key: ${{ secrets.EC2_SSH_KEY }}
           source: "./*"
-          target: /home/ubuntu/ecommercefullstack
+          target: /home/ubuntu/bloodbank
  
 
       # Step 4: SSH into EC2 and deploy with Docker Compose
@@ -41,7 +41,7 @@ jobs:
           debug: true
           script: |
             
-            cd ~/ecommercefullstack
+            cd ~/bloodbank
 
             # Install Git if missing
             if ! command -v git &> /dev/null; then
